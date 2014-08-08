@@ -6,7 +6,7 @@ ini_set('display_errors', '1');
 
 
 if ( ! function_exists( 'cinema_setup' ) ) :
-function cinema_setup{
+function cinema_setup(){
 
   // ===============================================================
   // ADD THEME SUPPORTS
@@ -57,7 +57,7 @@ function cinema_setup{
     'after_widget'  => '</div>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>'
-  ););
+  ));
 
   // ===============================================================
   // ENQUEUE STYLES AND SCRIPTS
