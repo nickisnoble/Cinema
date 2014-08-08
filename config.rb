@@ -1,4 +1,6 @@
 # Require any additional compass plugins here.
+require 'modular-scale'
+require 'autoprefixer-rails'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -22,3 +24,10 @@ line_comments = false
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
+on_stylesheet_saved do |file|
+  css = File.read(file)
+  File.open(file, 'w') do |io|
+    io << AutoprefixerRails.process(css)
+  end
+end

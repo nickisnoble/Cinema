@@ -6,8 +6,7 @@ module.exports = function(grunt) {
     compass: {
       scss: {
         options: {
-          sassDir: 'scss',
-          cssDir: ''
+          config: 'config.rb'
         }
       }
     },
@@ -17,24 +16,24 @@ module.exports = function(grunt) {
         tasks: ['compass']
       }
     },
-    csscomb: {
-      options: {
-        config: 'scss/.csscomb.json'
-      },
-      css: {
-        files: {
-          'style.css': 'style.css'
-        }
-      }
-    }
+    // csscomb: {
+    //   options: {
+    //     config: 'scss/.csscomb.json'
+    //   },
+    //   css: {
+    //     files: {
+    //       'css/style.css': 'css/style.css'
+    //     }
+    //   }
+    // }
   });
 
   // Load Plugins
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-csscomb');
+  // grunt.loadNpmTasks('grunt-csscomb');
 
   // Default task(s).
-  grunt.registerTask('default', ['csscomb', 'watch']);
+  grunt.registerTask('default', ['watch']);
 
 };

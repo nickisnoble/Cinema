@@ -1,7 +1,19 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+Theme Name: Cinema
+Theme URI: https://github.com/nickisnoble/cinema
+Author: Nick Noble
+Author URI: http://nicknoble.works
+Description: A theme designed to showcase film
+Version: 0.1
+License: MIT
+License URI: http://opensource.org/licenses/MIT
+Tags: film, portfolio, creative
+*/
+/*************************************************************
+ *
+ *  The essentials
+ *
+ *************************************************************/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,3 +69,61 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+/* 
+ *  Global Styles
+ *  =============
+ *
+ *  All the things that apply to all the things
+ *
+ */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: #66ff44;
+}
+
+::selection {
+  color: #66ff44;
+}
+
+/*************************************************************
+ *
+ *  Started from the bottom (now we're cascading here)
+ *
+ *************************************************************/
+/* 
+ *  Type
+ *  ====
+ *
+ *  The sexy part of the stylesheet (if you're into this sort of thing)
+ *
+ */
+img, embed, video {
+  width: 100%;
+  height: auto;
+}
+
+/* 
+ *  Layout
+ *  ======
+ *
+ *  The tectonic plates of your theme's ocean motion
+ *
+ */
+/*************************************************************
+ *
+ *  Yo doge I heard you like objects
+ *
+ *************************************************************/
+/* 
+ *  Nav Object
+ *  ==========
+ *
+ *  Puts things in a row, like a boss
+ *
+ */
