@@ -21,8 +21,16 @@
  *************************************************************/
 
 @import "type";          // Type setting, vertical rhythm, baseline
-@import "content";          // Images, videos, embeds, etc
+@import "content";       // Images, videos, embeds, etc
 @import "layout";        // Basic overarching layouts
+
+/*************************************************************
+ *
+ *  Steamy Themey Bits
+ *
+ *************************************************************/
+
+@import "header";        // Main header, menu styles
 
 /*************************************************************
  *

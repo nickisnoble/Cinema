@@ -14,9 +14,40 @@
   @extend %uppercase;
 }
 .menu-toggle{
+  @extend %fixed;
+  right: 0;
   @extend %inline-block;
-  @extend %text-right;
-  @extend %fright;
+  @extend %text-center;
+  height: $site-header-height;
+  width: $site-header-height;
+  line-height: $site-header-height;
+  z-index: 10;
+  .menu-open &{
+    background: $dark;
+  }
 }
 
 /* Main Navigation */
+.site-navigation{
+  @extend %fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 20%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: $dark;
+  color: $light-transparent;
+  padding: rhythm(1);
+  transform: translate(100%, 0);
+  z-index: 9;
+  a{
+    color: $light;
+  }
+}
+body{
+  transition: transform 300ms;
+  &.menu-open{
+    transform: translate(-20%, 0);
+  }
+}
