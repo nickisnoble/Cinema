@@ -7,6 +7,11 @@
  ///
 
 // Colors
-$highlight: #6f4;
+$primary: #339;
+
+$light: #fff;
+$dark:  #313131;
+
+$light-transparent: fade($light, 50%);
 
 // Type
