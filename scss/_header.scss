@@ -1,0 +1,22 @@
+/* Site Header */
+.site-header{
+  @extend %fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $site-header-height;
+  @extend %text-center;
+  background: $light-transparent;
+  line-height: $site-header-height;
+}
+.masthead{
+  @extend %inline-block;
+  @extend %uppercase;
+}
+.menu-toggle{
+  @extend %inline-block;
+  @extend %text-right;
+  @extend %fright;
+}
+
+/* Main Navigation */

@@ -16,12 +16,13 @@
 </head>
 <body>
 	
-	<header>
-
-		<h1><a href="<?php the_permalink();?>"><?php bloginfo('name');?></a></h1>
-
-		<nav>
-			<?php wp_nav_menu(array('menu' => 'primary_menu')); ?>
-		</nav>
-		
+	<header class="site-header">
+		<div class="container">
+			<h1 class="masthead"><a href="<?php the_permalink();?>"><?php bloginfo('name');?></a></h1>
+			<a href="#" data-toggle="menu" class="menu-toggle">Menu</a>
+		</div>
 	</header><!-- /header -->
+
+	<nav class="site-navigation">
+		<?php wp_nav_menu(array('menu' => 'primary_menu')); ?>
+	</nav>
