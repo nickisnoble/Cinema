@@ -5,3 +5,16 @@
  *  The tectonic plates of your theme's ocean motion
  *
  */
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+  @extend %oh;
+}
+
+%full-width{
+  width: 100%;
+}
+%oh{
+  overflow: hidden;
+}
