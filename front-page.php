@@ -3,15 +3,17 @@
     <?php if (have_posts()) : // Check for posts ?>
       <?php while (have_posts()) : the_post(); // If there are posts, do each like this: ?>
 
-        <article class="frame">
+        <article  class="frame"
+                  <?php if (has_post_thumbnail()) : // If the post has a thumbnail ?>
+                    <?php $thumb_id = get_post_thumbnail_id();
+                          $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
+                          $thumb_url = $thumb_url_array[0]; ?>
+                    style="background-image: url('<?php echo $thumb_url ?>');"
+                  <?php endif; ?>>
 
           <div class="container">
         
             <h2><a href="<?php the_permalink() ?>"><?php the_title();?></a></h2>
-
-            <?php if (has_post_thumbnail()) : // If the post has a thumbnail, show it: ?>
-              <a href="<?php the_permalink();?>"><?php the_post_thumbnail();?></a>
-            <?php endif; ?>
 
             <?php the_content(); // Get the post body ?>
 
