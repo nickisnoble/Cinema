@@ -16,7 +16,7 @@
 					<ul> <!-- Meta Content for post, add and remove as needed -->
 						<li><?php the_time('F jS, Y'); // Show the date posted ?></li>
 						<li><?php the_category(''); // Lists the categories?></li>
-						<li><?php comments_number( $zero, $one, $more, $deprecated ); // Let's us know if there's comments / how many exist ?></li>
+						<li><?php comments_number(); // Let's us know if there's comments / how many exist ?></li>
 					</ul>
 
 				</article>
