@@ -12,6 +12,9 @@ $primary: #339;
 $light: #fff;
 $dark:  #313131;
 
-$light-transparent: fade($light, 50%);
+$light-transparent: rgba(255,255,255,0.6);
 
 // Type
+
+// Layout
+$site-header-height: rhythm(3, 1em);
