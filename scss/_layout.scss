@@ -12,9 +12,34 @@
   @extend %oh;
 }
 
+// Placeholders
 %full-width{
   width: 100%;
 }
+%fleft{
+  float: left;
+}
+%fright{
+  float: right;
+}
 %oh{
   overflow: hidden;
+}
+%inline{
+  display: inline;
+}
+%inline-block{
+  display: inline-block;
+}
+%block{
+  display: block;
+}
+%absolute{
+  position: absolute;
+}
+%fixed{
+  position: fixed;
+}
+%relative{
+  position: relative;
 }
