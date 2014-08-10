@@ -15,6 +15,10 @@ $dark:  #313131;
 $light-transparent: rgba(255,255,255,0.6);
 
 // Type
+$ms-base: 20px;
+$ms-ratio: $augmented-fourth;
+$base-font-size: ms(0);
+$base-line-height: ms(2);
 
 // Layout
 $site-header-height: rhythm(3, 1em);
