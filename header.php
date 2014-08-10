@@ -12,9 +12,6 @@
 
 	<title><?php wp_title(); ?> - <?php bloginfo('name');?></title>
 
-	<script type="text/javascript" src="//use.typekit.net/zop4vpb.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 	<?php wp_head(); ?>
 </head>
 <body>
