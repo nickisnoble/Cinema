@@ -6,8 +6,40 @@
  *
  */
 
+body{
+  @include establish-baseline();
+  font-weight: 100;
+}
 
- // Type utility
+p{
+  @extend %base-type;
+  &:first-child{
+    font-size: ms(1);
+  }
+}
+
+h1, .h1{ @include adjust-font-size-to(ms(5)); @extend %fw-heavy;}
+h2, .h2{ @include adjust-font-size-to(ms(4));}
+h3, .h3{ @include adjust-font-size-to(ms(3));}
+h4, .h4{ @include adjust-font-size-to(ms(2));}
+h5, .h5{ @include adjust-font-size-to(ms(1)); @extend %fw-heavy;}
+h6, .h6{ @include adjust-font-size-to(ms(0)); @extend %fw-heavy;}
+
+ul{ @extend %base-type;}
+dl{ @extend %base-type;}
+ol{
+  @extend %base-type;
+}
+
+
+// Type utility
+%base-type{
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+%fw-heavy{
+  font-weight: 500;
+}
 %text-center{
   text-align: center;
 }
