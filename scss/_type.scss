@@ -9,15 +9,12 @@
 body{
   @include establish-baseline($base-font-size);
   font-weight: 100;
-  // @include baseline-grid-background($base-line-height);
   font-family: $serif;
 }
 
 p{
   @extend %base-type;
-  &:first-child{
-    font-size: ms(1);
-  }
+  @extend %type-max-width;
 }
 
 a{
@@ -40,6 +37,9 @@ ol{ @extend %base-type;}
 %base-type{
   font-size: $base-font-size;
   line-height: $base-line-height;
+}
+%type-max-width{
+  max-width: $type-max-width;
 }
 %fw-heavy{
   font-weight: 500;
