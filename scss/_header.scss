@@ -8,8 +8,11 @@
   @extend %text-center;
   background: $light-transparent;
   line-height: $site-header-height;
+  z-index: 8;
 }
 .masthead{
+  font-size: ms(2);
+  line-height: $site-header-height;
   @extend %inline-block;
   @extend %uppercase;
 }
@@ -24,7 +27,7 @@
   line-height: $site-header-height;
   z-index: 10;
   .menu-open &{
-    background: $dark;
+    @extend .dark;
   }
 }
 
@@ -34,36 +37,28 @@
   top: 0;
   bottom: 0;
   right: 0;
-  width: 66%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: $dark;
+  width: 20%;
+  transform: translate(100%, 0);
   color: $light-transparent;
   padding: rhythm(1);
-  transform: translate(100%, 0);
+  @extend .dark;
+  transition: transform $duration;
   z-index: 9;
-  a{
-    color: $light;
-  }
+}
+
+.main{
+  transition: transform $duration;
 }
 
 body{
   padding-top: $site-header-height;
-  transition: transform 300ms;
-  &.menu-open{
-    transform: translate(-66%, 0);
-  }
 }
 
-@media screen and (min-width: $tablet) {
-  .site-navigation{width: -50%;}
-  body.menu-open{transform: translate(-50%, 0);}
-}
-@media screen and (min-width: $laptop) {
-  .site-navigation{width: -25%;}
-  body.menu-open{transform: translate(-25%, 0);}
-}
-@media screen and (min-width: $desktop) {
-  .site-navigation{width: -18%;}
-  body.menu-open{transform: translate(-18%, 0);}
+.menu-open{
+  .main{
+    transform: translate(-20%, 0);
+  }
+  .site-navigation{
+    transform: translate(0, 0);
+  }
 }
