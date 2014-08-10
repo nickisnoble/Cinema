@@ -1,4 +1,14 @@
+a{
+  color: $primary;
+  &:hover{
+    color: lighten($primary, 20%);
+  }
+}
+
 .dark{
   color: $light;
-  background: $dark;
+  background-color: $dark;
+  a{
+    color: $light;
+  }
 }
