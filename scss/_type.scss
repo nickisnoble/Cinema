@@ -7,8 +7,9 @@
  */
 
 body{
-  @include establish-baseline();
+  @include establish-baseline($base-font-size);
   font-weight: 100;
+  @include baseline-grid-background($base-line-height);
 }
 
 p{
@@ -16,6 +17,10 @@ p{
   &:first-child{
     font-size: ms(1);
   }
+}
+
+a{
+  text-decoration: none;
 }
 
 h1, .h1{ @include adjust-font-size-to(ms(5)); @extend %fw-heavy;}
@@ -27,9 +32,7 @@ h6, .h6{ @include adjust-font-size-to(ms(0)); @extend %fw-heavy;}
 
 ul{ @extend %base-type;}
 dl{ @extend %base-type;}
-ol{
-  @extend %base-type;
-}
+ol{ @extend %base-type;}
 
 
 // Type utility
