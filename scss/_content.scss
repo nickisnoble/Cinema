@@ -15,16 +15,22 @@ img, embed, video{
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   @extend .dark;
   min-height: rhythm(12);
   @extend %relative;
-  &:after{
-    content: "";
-    @extend %absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: $dark-transparent;
+  z-index: 0;
+}
+.frame-darken{
+  @extend %absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $dark-transparent;
+  z-index: 1;
+  & + .container{
+    @extend %relative;
+    z-index: 2;
   }
 }
