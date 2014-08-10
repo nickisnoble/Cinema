@@ -12,6 +12,9 @@
 
 	<title><?php wp_title(); ?> - <?php bloginfo('name');?></title>
 
+	<script type="text/javascript" src="//use.typekit.net/zop4vpb.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -21,7 +24,7 @@
 			<h1 class="masthead"><a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>
 		</div>
 	</header><!-- /header -->
-	
+
 	<a href="#" data-toggle="menu" class="menu-toggle">Menu</a>
 
 	<nav class="site-navigation">

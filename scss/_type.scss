@@ -9,7 +9,8 @@
 body{
   @include establish-baseline($base-font-size);
   font-weight: 100;
-  @include baseline-grid-background($base-line-height);
+  // @include baseline-grid-background($base-line-height);
+  font-family: $serif;
 }
 
 p{
