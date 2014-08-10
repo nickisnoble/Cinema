@@ -3,13 +3,14 @@
     <?php if (have_posts()) : // Check for posts ?>
       <?php while (have_posts()) : the_post(); // If there are posts, do each like this: ?>
 
-        <article  class="post<?php if (has_post_thumbnail()) : // If the post has a thumbnail, add stuff ?> frame"
+        <article  id="post-<?php the_ID(); ?>" <?php if (has_post_thumbnail()) : // If the post has a thumbnail, add stuff ?>
                     <?php $thumb_id = get_post_thumbnail_id(); 
                           $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
                           $thumb_url = $thumb_url_array[0]; ?>
+                    <?php post_class('frame'); ?>
                     style="background-image: url('<?php echo $thumb_url ?>');">
                     <div class="frame-darken"></div>
-                  <?php else : // otherwise just close class attribute quotes: ?>">
+                  <?php else : // otherwise just close class attribute quotes: ?><?php post_class(); ?>>
                   <?php endif; // close tag ?>
 
           <div class="container">
