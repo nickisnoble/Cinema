@@ -42,12 +42,12 @@
   color: $light-transparent;
   padding: rhythm(1);
   @extend .dark;
-  transition: transform $duration;
+  transition: transform $nav-toggle-duration;
   z-index: 9;
 }
 
 .main{
-  transition: transform $duration;
+  transition: transform $nav-toggle-duration;
 }
 
 body{
