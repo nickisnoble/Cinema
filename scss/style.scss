@@ -10,13 +10,14 @@
  *************************************************************/
 
 @import "compass/reset";  // CSS Resets
+@import 'modular-scale';  // Modular Scale from Team-Sass
 @import "compass";        // Import compass mixins/utilities
 @import "settings";       // Import vars, mixins, functions, etc.
 @import "global";         // Global styles
 
 /*************************************************************
  *
- *  Started from the bottom (now we're cascading here)
+ *  Starting from the bottom (now we're here)
  *
  *************************************************************/
 
@@ -31,6 +32,7 @@
  *************************************************************/
 
 @import "header";        // Main header, menu styles
+@import "post";          // Post content styles
 
 /*************************************************************
  *
@@ -40,4 +42,10 @@
 
 @import "nav";           // Nav object
 
-// Add your bits here!
+/*************************************************************
+ *
+ *  I don't usually write scss, but when I do I abstract polish
+ *
+ *************************************************************/
+
+@import "color";         // A coat of paint
