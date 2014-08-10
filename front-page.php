@@ -14,12 +14,15 @@
           <div class="container">
         
             <h2><a href="<?php the_permalink() ?>"><?php the_title();?></a></h2>
+            
+            <?php if (!(has_post_thumbnail())) : ?>
+              <?php the_content(); // Get the post body ?>
+            
 
-            <?php the_content(); // Get the post body ?>
-
-            <ul> <!-- Meta Content for post, add and remove as needed -->
-              <li><?php the_category(''); // Lists the categories?></li>
-            </ul>
+              <ul> <!-- Meta Content for post, add and remove as needed -->
+                <li><?php the_category(''); // Lists the categories?></li>
+              </ul>
+            <?php endif; ?> 
 
           </div>
 
