@@ -22,7 +22,7 @@
 		</div>
 	</header><!-- /header -->
 
-	<a href="#" data-toggle="menu" class="menu-toggle">Menu</a>
+	<div data-toggle="menu" class="menu-toggle">&#9776;</div>
 
 	<nav class="site-navigation">
 		<?php wp_nav_menu(array('menu' => 'primary_menu')); ?>

@@ -15,20 +15,20 @@
   line-height: $site-header-height;
   @extend %inline-block;
   @extend %uppercase;
+  margin: 0;
 }
 .menu-toggle{
+  cursor: pointer;
   @extend %fixed;
   top: 0;
-  right: 0;
+  right: ms(1);
   @extend %inline-block;
+  font-size: ms(1);
   @extend %text-center;
   height: $site-header-height;
   width: $site-header-height;
   line-height: $site-header-height;
   z-index: 10;
-  .menu-open &{
-    @extend .dark;
-  }
 }
 
 /* Main Navigation */
@@ -60,5 +60,9 @@ body{
   }
   .site-navigation{
     transform: translate(0, 0);
+  }
+  .menu-toggle{
+    color: $light;
+    transition: color 300ms ease-in;
   }
 }
