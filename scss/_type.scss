@@ -15,7 +15,20 @@ body{
 p{
   @extend %base-type;
   @extend %type-max-width;
+  .post &, .page &{
+    &:first-of-type{
+      font-size: ms(1);
+    }
+    & + p{
+      text-indent: rhythm(1);
+    }
+    h2 + &{
+      @include margin-leader(2);
+    }
+  }
 }
+
+
 
 a{
   text-decoration: none;
