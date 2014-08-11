@@ -6,7 +6,7 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 				<div class="container">
 		
-					<h2><?php the_title();?></h2>
+					<h1><?php the_title();?></h1>
 
 					<?php if (has_post_thumbnail()) : // If the post has a thumbnail, show it: ?>
 						<a href="<?php the_permalink();?>"><?php the_post_thumbnail();?></a>

@@ -17,13 +17,14 @@ $dark-transparent:  rgba(0,0,0,0.3);
 
 // Type
 $ms-base: 20px;
-$ms-ratio: $major-third;
+$ms-ratio: $augmented-fourth;
 $base-font-size: ms(0);
 $base-line-height: ms(1);
 
 $type-max-width: 36rem;
 
 $serif: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+$sans: "oil can", CenturyGothic, "AppleGothic", sans-serif;
 
 // Layout
 $site-header-height: rhythm(2, 1em);

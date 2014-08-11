@@ -6,10 +6,11 @@
  *
  */
 
+@include establish-baseline();
+
 body{
-  @include establish-baseline($base-font-size);
   font-weight: 100;
-  font-family: $serif;
+  @extend %serif;
 }
 
 p{
@@ -20,26 +21,49 @@ p{
       font-size: ms(1);
     }
     & + p{
-      text-indent: rhythm(1);
+
     }
-    h2 + &{
-      @include margin-leader(2);
+    h1 + &{
+      @include margin-leader(3);
     }
   }
 }
 
-
-
 a{
   text-decoration: none;
 }
-
-h1, .h1{ @include adjust-font-size-to(ms(5)); @extend %fw-heavy;}
-h2, .h2{ @include adjust-font-size-to(ms(4));}
-h3, .h3{ @include adjust-font-size-to(ms(3));}
-h4, .h4{ @include adjust-font-size-to(ms(2));}
-h5, .h5{ @include adjust-font-size-to(ms(1)); @extend %fw-heavy;}
-h6, .h6{ @include adjust-font-size-to(ms(0)); @extend %fw-heavy;}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+h1, .h1{ 
+  @include adjust-font-size-to(ms(4));
+  @extend %fw-regular;
+}
+h2, .h2{ 
+  @include adjust-font-size-to(ms(3)); 
+  @include margin-leader(3, 1em);
+  @extend %fw-regular;
+}
+h3, .h3{ 
+  @include adjust-font-size-to(ms(2)); 
+  @include margin-leader(2, 1em);
+  @extend %fw-regular;
+}
+h4, .h4{ 
+  @include adjust-font-size-to(ms(1)); 
+  @include margin-leader(2, 1em);
+  @extend %fw-heavy;
+}
+h5, .h5{ 
+  @include adjust-font-size-to(ms(1)); 
+  @extend %fw-regular;
+}
+h6, .h6{ 
+  @include adjust-font-size-to(ms(-1));
+  @include margin-trailer(-1, ms(0));
+  font-weight: 900;
+  @extend %uppercase;
+}
 
 ul{ @extend %base-type;}
 dl{ @extend %base-type;}
@@ -55,7 +79,10 @@ ol{ @extend %base-type;}
   max-width: $type-max-width;
 }
 %fw-heavy{
-  font-weight: 500;
+  font-weight: 600;
+}
+%fw-regular{
+  font-weight: 200;
 }
 %text-center{
   text-align: center;
@@ -65,4 +92,10 @@ ol{ @extend %base-type;}
 }
 %uppercase{
   text-transform: uppercase;
+}
+%serif{
+  font-family: $serif;
+}
+%sans{
+  font-family: $sans;
 }

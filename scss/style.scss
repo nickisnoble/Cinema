@@ -9,7 +9,7 @@
  *
  *************************************************************/
 
-@import "compass/reset";  // CSS Resets
+@import "normalize";  // CSS Resets
 @import 'modular-scale';  // Modular Scale from Team-Sass
 @import "compass";        // Import compass mixins/utilities
 @import "settings";       // Import vars, mixins, functions, etc.
