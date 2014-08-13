@@ -33,7 +33,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   // grunt.loadNpmTasks('grunt-csscomb');
 
-  // Default task(s).
+  // Task(s).
   grunt.registerTask('default', ['watch']);
 
 };
