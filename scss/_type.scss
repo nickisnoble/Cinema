@@ -20,9 +20,6 @@ p{
     &:first-of-type{
       font-size: ms(1);
     }
-    & + p{
-
-    }
     h1 + &{
       @include margin-leader(3);
     }

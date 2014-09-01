@@ -21,6 +21,26 @@ body, html{
   @extend %oh;
 }
 
+@media screen and (min-width: $laptop) {
+  %grid{
+    float: left;
+    & + &{
+      padding-right: rhythm(1);
+    }
+  }
+  .one-third{ 
+    @extend %grid;
+    width: 33.333%;
+  }
+  .two-thirds{ 
+    @extend %grid;
+    width: 66.666%;
+  }
+  .pull-right{
+    float: right;
+  }
+}
+
 // Placeholders
 %full-width{
   width: 100%;

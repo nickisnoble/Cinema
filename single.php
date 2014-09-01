@@ -9,10 +9,27 @@
 					<h1><?php the_title();?></h1>
 
 					<?php if (has_post_thumbnail()) : // If the post has a thumbnail, show it: ?>
+						<br><!-- correct spacing for image -->
 						<a href="<?php the_permalink();?>"><?php the_post_thumbnail();?></a>
 					<?php endif; ?>
+					
+					<div class="two-thirds pull-right">
+						<?php the_content(); // Get the post body ?>
+					</div>
 
-					<?php the_content(); // Get the post body ?>
+					<aside class="one-third">
+
+						<div class="author-box">
+							<?php // Get Author info ?>
+							<div class="author-photo">
+								<?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>
+							</div>
+							<p class="lead author-name">About <?php the_author(); ?></p>
+							<p class="author-bio"><?php echo get_the_author_meta('description'); ?></p>
+						</div>
+
+					</aside>
+
 				</div>
 			</article>
 		
