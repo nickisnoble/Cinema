@@ -21,10 +21,12 @@ body, html{
   @extend %oh;
 }
 
-@media screen and ($laptop) {
+@media screen and (min-width: $laptop) {
   %grid{
     float: left;
-    padding: rhythm(1);
+    & + &{
+      padding-right: rhythm(1);
+    }
   }
   .one-third{ 
     @extend %grid;
