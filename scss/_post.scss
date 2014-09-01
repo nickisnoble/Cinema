@@ -3,3 +3,27 @@
     padding: rhythm(1,1em) 0;
   }
 }
+
+.author-box{
+  margin-top: rhythm(1);
+  background: #f5f5f5;
+  padding: rhythm(1);
+}
+.author-photo{ 
+  @extend %fleft;
+  @extend %oh;
+  margin-right: rhythm(1);
+  border-radius: 50%;
+  height: $author-img-height;
+  width: $author-img-height;
+  background-clip: padding-box;
+}
+.author-name{
+  margin-top: ($author-img-height - 30px)/2;
+  margin-bottom: ($author-img-height - 45px)/2;
+}
+.author-bio{
+  clear: both;
+  font-size: ms(-0.25);
+  line-height: 1.3;
+}
