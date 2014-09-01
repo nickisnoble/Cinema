@@ -44,6 +44,9 @@
   @extend .dark;
   transition: transform $nav-toggle-duration;
   z-index: 9;
+  ul{
+    @extend %unlist;
+  }
 }
 
 .main{
