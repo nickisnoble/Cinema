@@ -24,8 +24,8 @@
 							<div class="author-photo">
 								<?php echo get_avatar( get_the_author_meta( 'ID' ), 64 ); ?>
 							</div>
-							<p class="lead author-name"><?php the_author(); ?></p>
-							<p class="author-bio"><?php get_the_author_meta('description'); ?></p>
+							<p class="lead author-name">About <?php the_author(); ?></p>
+							<p class="author-bio"><?php echo get_the_author_meta('description'); ?></p>
 						</div>
 
 					</aside>
