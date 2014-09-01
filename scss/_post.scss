@@ -19,11 +19,16 @@
   background-clip: padding-box;
 }
 .author-name{
-  margin-top: ($author-img-height - 30px)/2;
-  margin-bottom: ($author-img-height - 45px)/2;
+  margin: 0;
 }
 .author-bio{
   clear: both;
   font-size: ms(-0.25);
   line-height: 1.3;
+}
+@media screen and (min-width: $tablet) {
+  .author-name{
+    margin-top: ($author-img-height - 30px)/2;
+    margin-bottom: ($author-img-height - 45px)/2;
+  }
 }
