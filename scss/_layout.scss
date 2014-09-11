@@ -25,7 +25,7 @@ body, html{
   %grid{
     float: left;
     & + &{
-      padding-right: rhythm(1);
+      padding-left: rhythm(1);
     }
   }
   .one-third{ 
@@ -35,9 +35,6 @@ body, html{
   .two-thirds{ 
     @extend %grid;
     width: 66.666%;
-  }
-  .pull-right{
-    float: right;
   }
 }
 
