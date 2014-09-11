@@ -10,7 +10,7 @@
 
 					<?php if (has_post_thumbnail()) : // If the post has a thumbnail, show it: ?>
 						<br><!-- correct spacing for image -->
-						<a href="<?php the_permalink();?>"><?php the_post_thumbnail();?></a>
+						<?php the_post_thumbnail();?>
 					<?php endif; ?>
 					
 					<div class="two-thirds">
