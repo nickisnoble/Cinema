@@ -13,7 +13,7 @@
 						<a href="<?php the_permalink();?>"><?php the_post_thumbnail();?></a>
 					<?php endif; ?>
 					
-					<div class="two-thirds pull-right">
+					<div class="two-thirds">
 						<?php the_content(); // Get the post body ?>
 					</div>
 
