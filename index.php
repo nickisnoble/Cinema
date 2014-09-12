@@ -19,9 +19,6 @@
             
             <?php if (!(has_post_thumbnail())) : ?>
               <?php the_content(); // Get the post body ?>
-              <ul> <!-- Meta Content for post, add and remove as needed -->
-                <li><?php the_category(''); // Lists the categories?></li>
-              </ul>
             <?php endif; ?> 
 
           </div>
@@ -31,7 +28,7 @@
       <?php endwhile; // There are no more posts to list ?>
 
     <?php else : // If no posts show up, tell the user ?>
-      <h2>No posts found, go buy some popcorn and come back later :)</h2>
+      <h2>No posts found, go get some popcorn and come back later :)</h2>
     <?php endif; ?>
 
     <?php get_footer(); // Load footer.php ?>
