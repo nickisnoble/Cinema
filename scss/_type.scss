@@ -17,9 +17,6 @@ p{
   @extend %base-type;
   @extend %type-max-width;
   .post &, .page &{
-    &:first-of-type{
-      font-size: ms(1);
-    }
     h1 + &{
       @include margin-leader(3);
     }
@@ -62,15 +59,31 @@ h6, .h6{
   @extend %uppercase;
 }
 
-ul{ @extend %base-type;}
-dl{ @extend %base-type;}
-ol{ @extend %base-type;}
+ul{ 
+  @extend %base-type;
+  @extend %lists;
+}
+dl{ 
+  @extend %base-type;
+  @extend %lists;
+}
+ol{ 
+  @extend %base-type;
+  @extend %lists;
+}
 
 
 // Type utility
 %base-type{
   font-size: $base-font-size;
   line-height: $base-line-height;
+}
+%lists{
+  margin: rhythm(1) 0;
+  padding-left: rhythm(1);
+  p + &{
+    margin-top: 0;
+  }
 }
 %type-max-width{
   max-width: $type-max-width;
