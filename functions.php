@@ -74,11 +74,21 @@ function cinema_setup(){
   // ===============================================================
 
   // Make custom post types searchable
-  function searchable_post_types( $query ) {
-   if ( $query->is_search ) { $query->set( 'post_type', array( 'site', 'plugin', 'theme', 'person' )); } 
-   return $query;
+  function cinema_searchable_post_types( $query ) {
+    if ( $query->is_search ) { $query->set( 'post_type', array( 'site', 'plugin', 'theme', 'person' )); } 
+    return $query;
   }
-  add_filter( 'the_search_query', 'searchable_post_types' );
+  add_filter( 'the_search_query', 'cinema_searchable_post_types' );
+
+
+  //Alternates odd/even classes on post_class
+  function cinema_alternate_post_class($classes){
+    global $current_class;
+    $classes[] = $current_class;
+    $current_class = ($current_class == 'even') ? 'odd' : 'even';
+    return $classes;
+  }
+  add_filter( 'post_class', 'cinema_alternate_post_class' );
 
 }
 endif; // cinema_setup
