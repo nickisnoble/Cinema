@@ -1,6 +1,15 @@
 .post, .page{
   .home &, .blog &{
     padding: rhythm(1,1em) 0;
+    h2{
+      margin-top: rhythm(1,1em);
+    }
+    &:not(.frame){
+      padding: rhythm(2,1em) 0;
+      h2{
+        margin-top: 0;
+      }
+    }
   }
 }
 
