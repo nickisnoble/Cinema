@@ -4,10 +4,13 @@
   }
 }
 
-.post-even{
-  transform:scaleY(-1);
-  & h2{
-    transform:scaleY(-1);
+.post{
+  &.even{
+    transform:scaleX(-1);
+    & h2, & p, & a{
+      transform:scaleX(-1);
+      text-align: right;
+    }
   }
 }
 
