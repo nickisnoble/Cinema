@@ -15,10 +15,12 @@
 
 .post{
   &.even{
-    transform:scaleX(-1);
-    & h2, & p, & a{
+    text-align: right;
+    &.frame{
       transform:scaleX(-1);
-      text-align: right;
+      h2, h3, h4, h5, h6, p, a{
+        transform:scaleX(-1);
+      }
     }
   }
   &:not(.frame) + &:not(.frame){
