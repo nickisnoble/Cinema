@@ -7,11 +7,6 @@
 				<div class="container">
 		
 					<h1><?php the_title();?></h1>
-
-					<?php if (has_post_thumbnail()) : // If the post has a thumbnail, show it: ?>
-						<br><!-- correct spacing for image -->
-						<?php the_post_thumbnail();?>
-					<?php endif; ?>
 					
 					<?php the_content(); // Get the post body ?>
 
