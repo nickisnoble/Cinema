@@ -1,0 +1,25 @@
+input, textarea{
+  width: 100%;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background: #e0e0e0;
+  padding: rhythm(1/2);
+  border-radius: 5px;
+  &:focus{
+    background: #ccc;
+  }
+}
+
+input[type=submit]{
+  background: $primary;
+  color: $light;
+  float: right;
+  max-width: 10em;
+  &:hover, &:focus{
+    background: lighten($primary, 10%);
+  }
+  &:active{
+    background: darken($primary, 10%);
+  }
+}
