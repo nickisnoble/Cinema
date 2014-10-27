@@ -17,5 +17,37 @@
 })(jQuery);
 
 (function($){
-  $(".container").fitVids();
+  $('.container').fitVids();
 })(jQuery);
+
+$(function() {
+  var animSpeed = 400;
+
+  var iframe = $('iframe')[0],
+      player = $f(iframe),
+      underlay = jQuery('.video-underlay');
+
+  player.addEvent('ready', function() {
+    player.addEvent('play', onPlay);
+    player.addEvent('pause', onPause);
+    player.addEvent('finish', onFinish);
+  });
+
+  function onPlay(id) {
+    underlay.fadeIn(animSpeed);
+  }
+
+  function onPause(id) {
+    underlay.fadeOut(animSpeed);
+  }
+
+  function onFinish(id) {
+    underlay.fadeOut(animSpeed);
+  } 
+
+  jQuery('.video-underlay').click(function(){ 
+    $(this).fadeOut(animSpeed);  
+    player.api('pause'); 
+  });
+
+});

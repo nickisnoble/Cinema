@@ -1,5 +1,7 @@
 <?php get_header(); // Load header.php ?>
 
+	<div class="video-underlay">&nbsp;</div>
+
 	<?php if (have_posts()) : // Check for posts ?>
 		<?php while (have_posts()) : the_post(); // If there are posts, do each like this: ?>
 
