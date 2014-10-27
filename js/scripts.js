@@ -15,3 +15,7 @@
       }
   });
 })(jQuery);
+
+(function($){
+  $(".container").fitVids();
+})(jQuery);

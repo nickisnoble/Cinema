@@ -65,7 +65,8 @@ function cinema_setup(){
 
   function cinema_enqueues() {
     wp_enqueue_style( 'main-stylesheet', get_stylesheet_uri() );
-    wp_enqueue_script( 'main-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), "0.1", true); // Adds built in jQuery too!
+    wp_enqueue_script( 'fitvids', get_stylesheet_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), "1.1", true); // Adds built in jQuery too!
+    wp_enqueue_script( 'main-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), "0.1", true);
   }
   add_action( 'wp_enqueue_scripts', 'cinema_enqueues' );
 
