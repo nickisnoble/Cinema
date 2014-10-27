@@ -53,11 +53,3 @@
 	<?php endif; ?>
 
 <?php get_footer(); // Load footer.php ?>
-
-
-<?php 
-  global $user_ID;
-  if ( get_the_author_meta('description',$user_ID) ) : // If a user has filled out their decscription show a bio on their entries 
-?>
-  
-<?php endif; ?>
