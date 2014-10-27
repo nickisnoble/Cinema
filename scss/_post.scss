@@ -67,10 +67,13 @@
   background-clip: padding-box;
 }
 .author-name{
+  font-size: ms(2);
+  padding: 0;
   margin: 0;
 }
 .author-bio{
   margin-top: rhythm(1,1em);
+  padding: rhythm(1) 0;
   clear: both;
   line-height: 1.3;
 }
